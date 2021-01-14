@@ -13131,18 +13131,18 @@ export namespace clutch {
                 public getTopology(request: clutch.topology.v1.IGetTopologyRequest): Promise<clutch.topology.v1.GetTopologyResponse>;
 
                 /**
-                 * Calls SearchTopology.
+                 * Calls Search.
                  * @param request SearchTopologyRequest message or plain object
                  * @param callback Node-style callback called with the error, if any, and SearchTopologyResponse
                  */
-                public searchTopology(request: clutch.topology.v1.ISearchTopologyRequest, callback: clutch.topology.v1.TopologyAPI.SearchTopologyCallback): void;
+                public search(request: clutch.topology.v1.ISearchTopologyRequest, callback: clutch.topology.v1.TopologyAPI.SearchCallback): void;
 
                 /**
-                 * Calls SearchTopology.
+                 * Calls Search.
                  * @param request SearchTopologyRequest message or plain object
                  * @returns Promise
                  */
-                public searchTopology(request: clutch.topology.v1.ISearchTopologyRequest): Promise<clutch.topology.v1.SearchTopologyResponse>;
+                public search(request: clutch.topology.v1.ISearchTopologyRequest): Promise<clutch.topology.v1.SearchTopologyResponse>;
             }
 
             namespace TopologyAPI {
@@ -13155,11 +13155,11 @@ export namespace clutch {
                 type GetTopologyCallback = (error: (Error|null), response?: clutch.topology.v1.GetTopologyResponse) => void;
 
                 /**
-                 * Callback as used by {@link clutch.topology.v1.TopologyAPI#searchTopology}.
+                 * Callback as used by {@link clutch.topology.v1.TopologyAPI#search}.
                  * @param error Error, if any
                  * @param [response] SearchTopologyResponse
                  */
-                type SearchTopologyCallback = (error: (Error|null), response?: clutch.topology.v1.SearchTopologyResponse) => void;
+                type SearchCallback = (error: (Error|null), response?: clutch.topology.v1.SearchTopologyResponse) => void;
             }
 
             /** Properties of a GetTopologyRequest. */
@@ -13265,7 +13265,7 @@ export namespace clutch {
                 sort?: (clutch.topology.v1.SearchTopologyRequest.ISort|null);
 
                 /** SearchTopologyRequest pageToken */
-                pageToken?: (number|Long|null);
+                pageToken?: (string|null);
 
                 /** SearchTopologyRequest limit */
                 limit?: (number|Long|null);
@@ -13287,7 +13287,7 @@ export namespace clutch {
                 public sort?: (clutch.topology.v1.SearchTopologyRequest.ISort|null);
 
                 /** SearchTopologyRequest pageToken. */
-                public pageToken: (number|Long);
+                public pageToken: string;
 
                 /** SearchTopologyRequest limit. */
                 public limit: (number|Long);
