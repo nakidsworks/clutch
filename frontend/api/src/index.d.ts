@@ -14048,7 +14048,7 @@ export namespace clutch {
                 pb?: (google.protobuf.IAny|null);
 
                 /** Resource metadata */
-                metadata?: ({ [k: string]: string }|null);
+                metadata?: ({ [k: string]: google.protobuf.IValue }|null);
             }
 
             /** Represents a Resource. */
@@ -14067,7 +14067,7 @@ export namespace clutch {
                 public pb?: (google.protobuf.IAny|null);
 
                 /** Resource metadata. */
-                public metadata: { [k: string]: string };
+                public metadata: { [k: string]: google.protobuf.IValue };
 
                 /**
                  * Verifies a Resource message.
